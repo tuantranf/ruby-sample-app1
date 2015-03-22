@@ -1,0 +1,12 @@
+language: ruby
+rvm: 2.0.0
+install: bundle install --deployment
+cache:
+  directories: vendor/bundle
+
+env:
+  global:
+    - RAILS_ENV=development
+
+notifications:
+  email: false
