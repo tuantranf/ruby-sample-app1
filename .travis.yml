@@ -7,3 +7,6 @@ cache:
 env:
   global:
     - RAILS_ENV=development
+
+notifications:
+  email: false
