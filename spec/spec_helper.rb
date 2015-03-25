@@ -41,4 +41,8 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.include Capybara::DSL
+
+  # http://stackoverflow.com/questions/22741975/undefined-local-variable-or-method-root-path
+  config.include Rails.application.routes.url_helpers
+
 end
