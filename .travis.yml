@@ -1,8 +1,6 @@
 language: ruby
 rvm: 2.0.0
 install: bundle install --deployment
-cache:
-  directories: vendor/bundle
 
 env:
   global:
@@ -10,3 +8,8 @@ env:
 
 notifications:
   email: false
+
+script:
+  - RAILS_ENV=development bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
